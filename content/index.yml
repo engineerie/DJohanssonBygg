@@ -1,0 +1,111 @@
+seo:
+  title: "Emma Thompson - UX/UI Designer"
+  description: "Welcome to my portfolio! I'm Emma Thompson, a UX/UI designer and front-end developer based in Boston. I specialize in creating user-centered digital experiences that are both beautiful and functional."
+title: "Din snickare i Varberg"
+description: "Välkommen till en trygg partner inom byggservice. Vi levererar kvalitet du kan lita på."
+hero:
+  links:
+    - label: "Kontakta oss"
+      to: /about
+      color: "neutral"
+  images:
+    - src: /images/Facebook Image (1).jpeg
+      alt: Random Image 1
+    - src: /images/Facebook Image (2).jpeg
+      alt: Random Image 2
+    - src: /images/Facebook Image 509770202.jpeg
+      alt: Random Image 3
+    - src: /images/Facebook Image.jpeg
+      alt: Random Image 4
+
+about:
+  title: "Om oss"
+  description: |
+    D. Johansson Byggservice drivs av Daniel Johansson i Varberg. Jag erbjuder byggtjänster för både privatpersoner och företag, med fokus på pålitlighet och gott hantverk. Med flera års erfarenhet tar jag mig an renoveringar, tillbyggnader och mindre nybyggen. Mitt mål är alltid att leverera ett bra resultat till ett rimligt pris - utan krångel.
+experience:
+  title: Varför välja oss?
+  items:
+    - title: "Vi är noggranna"
+      description: "Vi arbetar alltid med stor noggrannhet och med lyhördhet för våra kunders önskemål. Det gör att vi genom åren skaffat oss många nöjda kunder, både privatpersoner och företag som återkommande anlitar oss."
+      company:
+        name: Nuxt
+        logo: "i-radix-icons-ruler-square"
+        url: "https://nuxt.com"
+        color: "#ab78bd"
+    - title: Bred kompetens
+      description: Vi är ett byggföretag med bred kompetens. Vi finns i Varberg och vänder oss till både privatpersoner och företag i Halland och Göteborg. Bland de formella kompetenserna som finns i företaget kan nämnas Kontrollansvarig enligt PBL.
+      position: ""
+      date: "2022 - 2023"
+      company:
+        name: Raycast
+        logo: "i-fluent-toolbox-32-filled"
+        url: "https://raycast.com"
+        color: "#FF6363"
+    - title: Över 10 års erfarenhet
+      description: Vi åtar oss små som stora uppdrag, från mindre reparationsarbeten till totalentreprenader av villor, flerbostadshus, industri- & kontorslokaler. Vi har medlemsskap i Sveriges Byggindustrier
+      position: "Över 10 års erfarenhet"
+      date: "2020 - 2021"
+      company:
+        name:
+        logo: "i-ion-hammer"
+        url: "https://linear.app"
+        color: "daniel"
+testimonials:
+  - quote: "Vi anlitade D.Johansson Byggservice för ett altanbygge och är otroligt nöjda med resultatet. Kommunikation och bemötande var professionellt från start till mål. Rekommenderas varmt till alla som söker en pålitlig snickare!"
+    author:
+      name: "Privatkund"
+      description: "Ny altan"
+      # avatar:
+      #   src: "/images/Facebook Image.jpeg"
+      #   srcset: "public/images/Facebook Image.jpeg"
+  - quote: "Fasadbytet på vårt hus blev bättre än vi någonsin kunnat hoppas på. Allt utfördes med stor noggrannhet och kvalitet, och vi fick kontinuerlig återkoppling under hela processen."
+    author:
+      name: "Erik"
+      description: "Fasadbyte"
+  - quote: "Daniel och Adam visade stort engagemang och tydlig passion för sitt arbete. Dom var lösningsorienterad och hittade smarta sätt att möta våra behov utan att kompromissa på kvalitet."
+    author:
+      name: "Axel"
+      description: "Köksinstallation"
+
+blog:
+  title: "Senaste projekten"
+  description: " "
+faq:
+  title: Vanliga frågor
+  description:
+  categories:
+    - title: Tjänster
+      questions:
+        - label: Vilka typer av byggprojekt utför ni?
+          content: |
+            Vi hjälper till med renoveringar, om- och tillbyggnader, nybyggnation samt mindre snickeriarbeten som altaner, kök och fasadbyten.
+        - label: Tar ni både små och stora uppdrag?
+          content: |
+            Ja, vi tar oss an allt från mindre servicearbeten till större entreprenader. Efter ett kostnadsfritt platsbesök lämnar vi offert och en tydlig tidplan.
+        - label: Vilka områden arbetar ni i?
+          content: |
+            Vi utgår från Varberg och arbetar i Halland och Göteborg med omnejd.
+        - label: Kan ni hjälpa till med ritningar och bygglov?
+          content: |
+            Vi kan ta fram enklare handlingar och samordna med kontrollansvarig/arkitekt vid behov. Vi vägleder även i bygglovsprocessen.
+        - label: Har ni F-skattsedel och försäkring?
+          content: |
+            Ja, vi är godkända för F-skatt och har ansvarsförsäkring för din trygghet.
+
+    - title: Priser & Tid
+      questions:
+        - label: Ger ni kostnadsfri offert?
+          content: |
+            Ja, offert och rådgivning inför projektstart är kostnadsfri.
+        - label: Hur mycket kostar det?
+          content: |
+            Pris beror på omfattning, materialval och tidsåtgång. Vi erbjuder fast pris eller löpande räkning enligt överenskommelse och specificerar alltid arbets- och materialkostnader i offerten.
+        - label: Hur lång tid tar ett projekt?
+          content: |
+            Tidsåtgång varierar med projektets storlek. Mindre arbeten tar ofta 1–2 veckor, medan större projekt planeras individuellt. Du får en tydlig tidplan i samband med offerten.
+        - label: Hur fungerar betalningen?
+          content: |
+            Betalning sker enligt avtal, vanligtvis delbetalningar under projektets gång och slutbetalning efter godkänt avslut.
+        - label: Hur fungerar ROT-avdrag?
+          content: |
+            För bygg- och renoveringstjänster gäller i regel **ROT-avdrag**, vilket ger 30% skattereduktion på arbetskostnaden upp till Skatteverkets gällande tak. Vi sköter administrationen och drar av beloppet direkt på fakturan.

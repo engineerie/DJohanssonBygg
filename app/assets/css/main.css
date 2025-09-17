@@ -1,0 +1,66 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@source "../../../content/**/*";
+
+@theme static {
+  --font-sans: "Public Sans", sans-serif;
+  --font-serif: "Instrument Serif", serif;
+
+  --color-daniel-50: #faf7fc;
+  --color-daniel-100: #f5eff8;
+  --color-daniel-200: #ebdef0;
+  --color-daniel-300: #dbc3e4;
+  --color-daniel-400: #c59fd3;
+  --color-daniel-500: #ab78bd;
+  --color-daniel-600: #8e59a0;
+  --color-daniel-700: #764883;
+  --color-daniel-800: #623c6c;
+  --color-daniel-900: #53355a;
+  --color-daniel-950: #321a38;
+}
+
+:root {
+  --ui-container: var(--container-6xl);
+  --ui-header-height: --spacing(24);
+
+  ::selection {
+    color: #282a30;
+    background-color: #c8c8c8;
+  }
+}
+
+.dark {
+  ::selection {
+    color: #ffffff;
+    background-color: #474747;
+  }
+}
+
+.background {
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(#faf7fc 2px, transparent 2px),
+    linear-gradient(90deg, #faf7fc 2px, transparent 2px),
+    linear-gradient(#faf7fc 1px, transparent 1px),
+    linear-gradient(90deg, #faf7fc 1px, #ffffff 1px);
+  background-size:
+    50px 50px,
+    50px 50px,
+    10px 10px,
+    10px 10px;
+  background-position:
+    -2px -2px,
+    -2px -2px,
+    -1px -1px,
+    -1px -1px;
+}
+
+.dark .background {
+  background-color: #0f0f0f;
+  background-image:
+    linear-gradient(#1a1a1a 2px, transparent 2px),
+    linear-gradient(90deg, #1a1a1a 2px, transparent 2px),
+    linear-gradient(#1a1a1a 1px, transparent 1px),
+    linear-gradient(90deg, #1a1a1a 1px, #0f0f0f 1px);
+}
