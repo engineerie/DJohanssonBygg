@@ -1,6 +1,7 @@
 seo:
   title: "Emma Thompson - UX/UI Designer"
   description: "Welcome to my portfolio! I'm Emma Thompson, a UX/UI designer and front-end developer based in Boston. I specialize in creating user-centered digital experiences that are both beautiful and functional."
+navigation: false
 title: "Din snickare i Varberg"
 description: "Välkommen till en trygg partner inom byggservice. Vi levererar kvalitet du kan lita på."
 hero:
