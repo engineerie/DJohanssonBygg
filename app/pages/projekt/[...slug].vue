@@ -6,24 +6,24 @@ import { findPageBreadcrumb } from '@nuxt/content/utils'
 const route = useRoute()
 
 const { data: page } = await useAsyncData(route.path, () =>
-  queryCollection('blog').path(route.path).first()
+  queryCollection('projekt').path(route.path).first()
 )
 if (!page.value) throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
 const { data: surround } = await useAsyncData(`${route.path}-surround`, () =>
-  queryCollectionItemSurroundings('blog', route.path, {
+  queryCollectionItemSurroundings('projekt', route.path, {
     fields: ['description']
   })
 )
 
 const navigation = inject<Ref<ContentNavigationItem[]>>('navigation', ref([]))
-const blogNavigation = computed(() => navigation.value.find(item => item.path === '/blog')?.children || [])
+const projektNavigation = computed(() => navigation.value.find(item => item.path === '/projekt')?.children || [])
 
-const breadcrumb = computed(() => mapContentNavigation(findPageBreadcrumb(blogNavigation?.value, page.value?.path)).map(({ icon, ...link }) => link))
+const breadcrumb = computed(() => mapContentNavigation(findPageBreadcrumb(projektNavigation?.value, page.value?.path)).map(({ icon, ...link }) => link))
 
 if (page.value.image) {
   defineOgImage({ url: page.value.image })
 } else {
-  defineOgImageComponent('Blog', {
+  defineOgImageComponent('projekt', {
     headline: breadcrumb.value.map(item => item.label).join(' > ')
   }, {
     fonts: ['Geist:400', 'Geist:600']
@@ -56,11 +56,11 @@ const formatDate = (dateString: string) => {
   <UContainer class="sm:border-x border-daniel-700/30 min-h-screen lg:px-0 relative ">
 
     <UPage v-if="page">
-      <UButton to="/blog" class="text-sm rounded-none flex items-center gap-1 absolute left-4 top-3.5" color="neutral"
-        variant="outline">
+      <!-- <UButton to="/projekt" class="text-sm rounded-none flex items-center gap-1 absolute left-4 top-3.5"
+        color="neutral" variant="outline">
         <UIcon name="lucide:chevron-left" />
         Projekt
-      </UButton>
+      </UButton> -->
       <div class="flex flex-col gap-3 my-8">
         <div class="flex text-xs text-muted items-center justify-center gap-2">
           <span v-if="page.date">

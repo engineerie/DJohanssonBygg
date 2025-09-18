@@ -61,7 +61,7 @@ export default defineContentConfig({
           links: z.array(createButtonSchema()),
           images: z.array(createImageSchema()),
         }),
-        about: createBaseSchema(),
+        kontakt: createBaseSchema(),
         experience: createBaseSchema().extend({
           items: z.array(
             z.object({
@@ -77,7 +77,7 @@ export default defineContentConfig({
           ),
         }),
         testimonials: z.array(createTestimonialSchema()),
-        blog: createBaseSchema(),
+        projekt: createBaseSchema(),
         faq: createBaseSchema().extend({
           categories: z.array(
             z.object({
@@ -105,9 +105,9 @@ export default defineContentConfig({
         date: z.date(),
       }),
     }),
-    blog: defineCollection({
+    projekt: defineCollection({
       type: "page",
-      source: "blog/*.md",
+      source: "projekt/*.md",
       schema: z.object({
         minRead: z.number(),
         date: z.date(),
@@ -117,7 +117,7 @@ export default defineContentConfig({
     }),
     pages: defineCollection({
       type: "page",
-      source: [{ include: "projects.yml" }, { include: "blog.yml" }],
+      source: [{ include: "projects.yml" }, { include: "projekt.yml" }],
       schema: z.object({
         links: z.array(createButtonSchema()),
       }),
@@ -138,9 +138,9 @@ export default defineContentConfig({
         ),
       }),
     }),
-    about: defineCollection({
+    kontakt: defineCollection({
       type: "page",
-      source: "about.yml",
+      source: "kontakt.yml",
       schema: z.object({
         content: z.object({}),
         images: z.array(createImageSchema()),

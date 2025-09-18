@@ -42,7 +42,7 @@ useSeoMeta({
         </UPageSection>
       </UContainer>
     </div>
-    <LandingBlog :page />
+    <LandingProjekt :page />
     <LandingTestimonials :page />
     <LandingFAQ :page />
   </UPage>

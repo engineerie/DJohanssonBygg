@@ -22,14 +22,14 @@ useSeoMeta({
 const [{ data: navigation }, { data: files }] = await Promise.all([
   useAsyncData('navigation', () => {
     return Promise.all([
-      queryCollectionNavigation('blog')
+      queryCollectionNavigation('projekt')
     ])
   }, {
     transform: data => data.flat()
   }),
   useLazyAsyncData('search', () => {
     return Promise.all([
-      queryCollectionSearchSections('blog')
+      queryCollectionSearchSections('projekt')
     ])
   }, {
     server: false,
@@ -53,13 +53,8 @@ const [{ data: navigation }, { data: files }] = await Promise.all([
     <AppFooter />
 
     <ClientOnly>
-      <LazyUContentSearch
-        :files="files"
-        shortcut="meta_k"
-        :navigation="navigation"
-        :links="navLinks"
-        :fuse="{ resultLimit: 42 }"
-      />
+      <LazyUContentSearch :files="files" shortcut="meta_k" :navigation="navigation" :links="navLinks"
+        :fuse="{ resultLimit: 42 }" />
     </ClientOnly>
 
     <UToaster />

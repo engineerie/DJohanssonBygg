@@ -1,12 +1,12 @@
 seo:
   title: D.Johansson Byggservice AB
-  description: ''
+  description: ""
 title: Din snickare i Varberg
 description: Välkommen till en trygg partner inom byggservice. Vi levererar kvalitet du kan lita på.
 hero:
   links:
     - label: Kontakta oss
-      to: /about
+      to: /kontakt
       color: neutral
   images:
     - src: /images/Facebook Image (1).jpeg
@@ -17,7 +17,7 @@ hero:
       alt: Random Image 3
     - src: /images/Facebook Image.jpeg
       alt: Random Image 4
-about:
+kontakt:
   title: Om oss
   description: |
     D. Johansson Byggservice drivs av Daniel Johansson i Varberg. Jag erbjuder byggtjänster för både privatpersoner och företag, med fokus på pålitlighet och gott hantverk. Med flera års erfarenhet tar jag mig an renoveringar, tillbyggnader och mindre nybyggen. Mitt mål är alltid att leverera ett bra resultat till ett rimligt pris - utan krångel.
@@ -30,26 +30,26 @@ experience:
         name: Nuxt
         logo: i-radix-icons-ruler-square
         url: https://nuxt.com
-        color: '#ab78bd'
+        color: "#ab78bd"
     - title: Bred kompetens
       description: Vi är ett byggföretag med bred kompetens. Vi finns i Varberg och vänder oss till både privatpersoner och företag i Halland och Göteborg. Bland de formella kompetenserna som finns i företaget kan nämnas Kontrollansvarig enligt PBL.
-      position: ''
+      position: ""
       date: 2022 - 2023
       company:
         name: Raycast
         logo: i-fluent-toolbox-32-filled
         url: https://raycast.com
-        color: '#FF6363'
+        color: "#FF6363"
     - title: Över 10 års erfarenhet
       description: Vi åtar oss små som stora uppdrag, från mindre reparationsarbeten till totalentreprenader av villor, flerbostadshus, industri- & kontorslokaler. Vi har medlemsskap i Sveriges Byggindustrier
       position: Över 10 års erfarenhet
       date: 2020 - 2021
       company:
-        name: ''
+        name: ""
         logo: i-ion-hammer
         url: https://linear.app
         color: daniel
-  description: ''
+  description: ""
 testimonials:
   - quote: Vi anlitade D.Johansson Byggservice för ett altanbygge och är otroligt nöjda med resultatet. Kommunikation och bemötande var professionellt från start till mål. Rekommenderas varmt till alla som söker en pålitlig snickare!
     author:
@@ -63,12 +63,12 @@ testimonials:
     author:
       name: Axel
       description: Köksinstallation
-blog:
+projekt:
   title: Senaste projekten
-  description: ' '
+  description: " "
 faq:
   title: Vanliga frågor
-  description: ''
+  description: ""
   categories:
     - title: Tjänster
       questions:

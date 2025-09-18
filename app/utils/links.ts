@@ -14,11 +14,11 @@ export const navLinks: NavigationMenuItem[] = [
   {
     label: "Projekt",
     icon: "i-lucide-file-text",
-    to: "/blog",
+    to: "/projekt",
   },
   {
     label: "Kontakt",
     icon: "i-lucide-user",
-    to: "/about",
+    to: "/kontakt",
   },
 ];

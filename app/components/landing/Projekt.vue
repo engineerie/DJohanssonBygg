@@ -5,11 +5,11 @@ defineProps<{
   page: IndexCollectionItem
 }>()
 
-const { data: posts } = await useAsyncData('index-blogs', () =>
-  queryCollection('blog').order('date', 'DESC').limit(3).all()
+const { data: posts } = await useAsyncData('index-projekts', () =>
+  queryCollection('projekt').order('date', 'DESC').limit(3).all()
 )
 if (!posts.value) {
-  throw createError({ statusCode: 404, statusMessage: 'blogs posts not found', fatal: true })
+  throw createError({ statusCode: 404, statusMessage: 'projekts posts not found', fatal: true })
 }
 </script>
 
@@ -17,14 +17,14 @@ if (!posts.value) {
   <div class="border-b border-primary-700/30">
     <UContainer class="sm:border-x border-daniel-700/30">
 
-      <UPageSection :title="page.blog.title" :description="page.blog.description"
+      <UPageSection :title="page.projekt.title" :description="page.projekt.description"
         class="-mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 background" :ui="{
           container: '!py-16 sm:gap-6 lg:gap-8 ',
           title: 'text-left text-xl sm:text-xl lg:text-2xl font-medium',
           description: 'text-left mt-2 text-sm sm:text-md lg:text-sm text-muted'
         }">
         <template #description>
-          <UButton to="/blog" size="md" color="neutral" variant="outline" label="Visa alla projekt"
+          <UButton to="/projekt" size="md" color="neutral" variant="outline" label="Visa alla projekt"
             class="rounded-none">
             <!-- <template #trailing>
           <UIcon name="i-lucide-arrow-right"
