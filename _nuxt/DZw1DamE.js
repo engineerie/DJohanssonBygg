@@ -1,0 +1,1 @@
+import{c as t,h as a,e,R as r,S as _,bG as c,bH as l,bI as p}from"./D55nJIdt.js";import{_ as i}from"./DlAUqK2U.js";const f={};function m(n,u){const o=l,s=p;return a(),t("div",null,[e(o,{links:"navLinks"in n?n.navLinks:_(c)},null,8,["links"]),r(n.$slots,"default"),e(s)])}const v=i(f,[["render",m]]);export{v as default};
