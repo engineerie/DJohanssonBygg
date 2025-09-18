@@ -53,7 +53,7 @@ const formatDate = (dateString: string) => {
 
 <template>
 
-  <UContainer class="sm:border-x border-daniel-700/30 min-h-screen lg:px-0 relative ">
+  <UContainer class="sm:border-x border-daniel-700/30 min-h-screen lg:px-0 relative pt-6">
 
     <UPage v-if="page">
       <!-- <UButton to="/projekt" class="text-sm rounded-none flex items-center gap-1 absolute left-4 top-3.5"

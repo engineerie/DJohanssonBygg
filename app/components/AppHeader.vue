@@ -35,7 +35,9 @@ defineProps<{
 
     }"></UNavigationMenu>
 
-
+    <template #body>
+      <UNavigationMenu :items="links" orientation="vertical" class="-mx-2.5" :ui="{ link: 'text-xl' }" />
+    </template>
   </UHeader>
 
 </template>
