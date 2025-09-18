@@ -146,17 +146,17 @@ export default defineContentConfig({
         description: z.string().optional(),
         phone: z.object({
           number: z.string().nonempty(),
-          icon: z.string().nonempty(),
+          icon: z.string().editor({ input: "icon" }),
         }),
         email: z.object({
           address: z.string().email().nonempty(),
-          icon: z.string().nonempty(),
+          icon: z.string().editor({ input: "icon" }),
         }),
         location: z.object({
           street: z.string().nonempty(),
           postCode: z.string().nonempty(),
           county: z.string().nonempty(),
-          icon: z.string().nonempty(),
+          icon: z.string().editor({ input: "icon" }),
         }),
         content: z.string().optional(),
         images: z.array(createImageSchema()).optional(),
