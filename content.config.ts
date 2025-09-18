@@ -142,8 +142,24 @@ export default defineContentConfig({
       type: "page",
       source: "kontakt.yml",
       schema: z.object({
-        content: z.object({}),
-        images: z.array(createImageSchema()),
+        title: z.string().nonempty(),
+        description: z.string().optional(),
+        phone: z.object({
+          number: z.string().nonempty(),
+          icon: z.string().nonempty(),
+        }),
+        email: z.object({
+          address: z.string().email().nonempty(),
+          icon: z.string().nonempty(),
+        }),
+        location: z.object({
+          street: z.string().nonempty(),
+          postCode: z.string().nonempty(),
+          county: z.string().nonempty(),
+          icon: z.string().nonempty(),
+        }),
+        content: z.string().optional(),
+        images: z.array(createImageSchema()).optional(),
       }),
     }),
   },
