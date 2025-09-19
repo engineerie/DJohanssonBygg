@@ -13,6 +13,9 @@ export default defineAppConfig({
     available: true,
   },
   ui: {
+    icons: {
+      dynamic: true,
+    },
     colors: {
       primary: "daniel",
       neutral: "neutral",
