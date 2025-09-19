@@ -47,7 +47,7 @@ useSeoMeta({
             :in-view-options="{ once: true }">
             <div class="border-y border-daniel-700/30 px-6 lg:px-12 overflow-hidden ">
               <UBlogPost variant="naked" orientation="horizontal" :to="post.path" v-bind="post" :ui="{
-                root: ' md:grid md:grid-cols-2 group overflow-visible transition-all duration-300 bg-white border-x sm:border-none-y border-daniel-700/30 rounded-none',
+                root: ' md:grid md:grid-cols-2 group overflow-visible transition-all duration-300 bg-white dark:bg-neutral-950 border-x sm:border-none-y border-daniel-700/30 rounded-none',
                 image:
                   'group-hover/blog-post:scale-105 ring-default',
                 header:
@@ -56,7 +56,6 @@ useSeoMeta({
                     : 'shadow-none overflow-visible'
               }" />
             </div>
-
           </Motion>
         </UBlogPosts>
       </UPageSection>
