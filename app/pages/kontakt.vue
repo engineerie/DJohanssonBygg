@@ -32,7 +32,8 @@ useSeoMeta({
         <template #description>
           <div class="space-y-1 text-left w-full">
             <div class="flex items-center gap-2">
-              <UIcon name="i-heroicons-phone-20-solid" class="text-daniel-500" />
+              <i class="i-heroicons-phone-20-solid text-daniel-500"></i>
+              <!-- <UIcon name="i-heroicons-phone-20-solid" class="text-daniel-500" /> -->
               <a :href="'tel:' + page.phone.number" class="hover:underline">{{ page.phone.number }}</a>
             </div>
             <div class="flex items-center gap-2">

@@ -39,14 +39,4 @@ export default defineNuxtConfig({
       },
     },
   },
-
-  unocss: {
-    safelist: [
-      "i-heroicons-phone-20-solid",
-      "i-heroicons-envelope-20-solid",
-      "i-heroicons-map-pin-20-solid",
-      "i-lucide-sun",
-      "i-lucide-moon",
-    ],
-  },
 });
