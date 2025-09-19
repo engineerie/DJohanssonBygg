@@ -14,7 +14,8 @@ export default defineAppConfig({
   },
   ui: {
     icons: {
-      dynamic: true,
+      serverBundle: false,
+      // dynamic: true,
     },
     colors: {
       primary: "daniel",

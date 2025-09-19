@@ -36,11 +36,11 @@ useSeoMeta({
               <a :href="'tel:' + page.phone.number" class="hover:underline">{{ page.phone.number }}</a>
             </div>
             <div class="flex items-center gap-2">
-              <UIcon dynamic :name="page.email.icon" class="text-daniel-500" />
+              <UIcon :name="page.email.icon" class="text-daniel-500" />
               <a :href="'mailto:' + page.email.address" class="hover:underline">{{ page.email.address }}</a>
             </div>
             <div class="flex gap-2">
-              <UIcon dynamic :name="page.location.icon" class="text-daniel-500 mt-0.5" />
+              <UIcon :name="page.location.icon" class="text-daniel-500 mt-0.5" />
               <div>
                 <div>{{ page.location.street }}</div>
                 <div>{{ page.location.postCode }}</div>
