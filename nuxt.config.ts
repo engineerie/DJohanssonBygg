@@ -13,7 +13,6 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "nuxt-og-image",
     "motion-v/nuxt",
-    "@unocss/nuxt",
   ],
 
   devtools: {
