@@ -13,7 +13,7 @@ export const navLinks: NavigationMenuItem[] = [
   // },
   {
     label: "Projekt",
-    icon: "i-lucide-file-text",
+    icon: "i-ion-hammer-outline",
     to: "/projekt",
   },
   {

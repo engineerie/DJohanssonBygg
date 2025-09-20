@@ -112,6 +112,9 @@ export default defineContentConfig({
         minRead: z.number(),
         date: z.date(),
         image: z.string().nonempty().editor({ input: "media" }),
+        images: z
+          .array(z.string().nonempty().editor({ input: "media" }))
+          .optional(),
         author: createAuthorSchema(),
       }),
     }),

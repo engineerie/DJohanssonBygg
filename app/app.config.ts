@@ -35,25 +35,19 @@ export default defineAppConfig({
   footer: {
     credits: `D.Johansson Byggservice • © ${new Date().getFullYear()}`,
     colorMode: false,
-    links: [
-      {
-        icon: "i-simple-icons-discord",
-        to: "https://go.nuxt.com/discord",
-        target: "_blank",
-        "aria-label": "Nuxt on Discord",
-      },
-      {
-        icon: "i-simple-icons-x",
-        to: "https://go.nuxt.com/x",
-        target: "_blank",
-        "aria-label": "Nuxt on X",
-      },
-      {
-        icon: "i-simple-icons-github",
-        to: "https://github.com/nuxt/ui",
-        target: "_blank",
-        "aria-label": "Nuxt UI on GitHub",
-      },
-    ],
+    phone: {
+      icon: "i-heroicons-phone-20-solid",
+      number: "+46 73 072 85 31",
+    },
+    email: {
+      address: "info@djohanssonbygg.se",
+      icon: "i-heroicons-envelope-20-solid",
+    },
+    location: {
+      street: "Telnebacka 12",
+      postCode: "432 66",
+      county: "Veddige",
+      icon: "i-heroicons-map-pin-20-solid",
+    },
   },
 });

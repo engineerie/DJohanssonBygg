@@ -15,20 +15,10 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () =>
   })
 )
 
-const navigation = inject<Ref<ContentNavigationItem[]>>('navigation', ref([]))
-const projektNavigation = computed(() => navigation.value.find(item => item.path === '/projekt')?.children || [])
+// const navigation = inject<Ref<ContentNavigationItem[]>>('navigation', ref([]))
+// const projektNavigation = computed(() => navigation.value.find(item => item.path === '/projekt')?.children || [])
 
-const breadcrumb = computed(() => mapContentNavigation(findPageBreadcrumb(projektNavigation?.value, page.value?.path)).map(({ icon, ...link }) => link))
-
-if (page.value.image) {
-  defineOgImage({ url: page.value.image })
-} else {
-  defineOgImageComponent('projekt', {
-    headline: breadcrumb.value.map(item => item.label).join(' > ')
-  }, {
-    fonts: ['Geist:400', 'Geist:600']
-  })
-}
+// const breadcrumb = computed(() => mapContentNavigation(findPageBreadcrumb(projektNavigation?.value, page.value?.path)).map(({ icon, ...link }) => link))
 
 const title = page.value?.seo?.title || page.value?.title
 const description = page.value?.seo?.description || page.value?.description
@@ -40,7 +30,19 @@ useSeoMeta({
   ogTitle: title
 })
 
-const articleLink = computed(() => `${window?.location}`)
+const carouselItems = computed<string[]>(() => {
+  const p: any = page.value || {}
+  const arr = Array.isArray(p.images) && p.images.length ? p.images : (p.image ? [p.image] : [])
+  return (arr as unknown[]).filter((s): s is string => typeof s === 'string' && s.length > 0)
+})
+
+// Ensure OG image picks the first carousel image if present
+if (page.value) {
+  const ogUrl = (Array.isArray((page.value as any).images) && (page.value as any).images[0]) || page.value.image
+  if (ogUrl) defineOgImage({ url: ogUrl })
+}
+
+// const articleLink = computed(() => `${window?.location}`)
 
 const formatDate = (dateString: string) => {
   return new Date(dateString).toLocaleDateString('en-US', {
@@ -53,7 +55,7 @@ const formatDate = (dateString: string) => {
 
 <template>
 
-  <UContainer class="sm:border-x border-daniel-700/30 min-h-screen lg:px-0 relative pt-6">
+  <div class="sm:border-x border-daniel-700/30 min-h-screen relative pt-6">
 
     <UPage v-if="page">
       <!-- <UButton to="/projekt" class="text-sm rounded-none flex items-center gap-1 absolute left-4 top-3.5"
@@ -61,7 +63,7 @@ const formatDate = (dateString: string) => {
         <UIcon name="lucide:chevron-left" />
         Projekt
       </UButton> -->
-      <div class="flex flex-col gap-3 my-8">
+      <div class="flex flex-col gap-3 my-12">
         <div class="flex text-xs text-muted items-center justify-center gap-2">
           <span v-if="page.date">
             {{ formatDate(page.date) }}
@@ -73,15 +75,22 @@ const formatDate = (dateString: string) => {
               {{ page.minRead }} MIN READ
             </span> -->
         </div>
-        <div class="lg:border-y border-primary-700/30">
+        <div class="border-y border-primary-700/30 mb-4">
 
 
-          <UContainer class="relative  border-daniel-700/30 lg:px-18">
-            <NuxtImg :src="page.image" :alt="page.title"
-              class="rounded-none w-full object-cover object-center border-x border-primary-700/30 max-h-[400px]" />
+          <UContainer class="relative  border-daniel-700/30 sm:px-24 lg:px-40">
+            <UCarousel v-if="carouselItems.length" v-slot="{ item }" :items="carouselItems" dots arrows :ui="{
+              prev: 'rounded-none',
+              next: 'rounded-none',
+              dots: '-bottom-4',
+              dot: 'w-6 h-1',
+            }" class="w-full border-x border-daniel-700/30">
+              <NuxtImg :src="item" :alt="page.title" width="800" height="450"
+                class="rounded-none w-full object-cover object-center" />
+            </UCarousel>
           </UContainer>
         </div>
-        <h1 class="text-4xl text-center font-medium max-w-3xl mx-auto mt-4">
+        <h1 class="text-3xl sm:text-4xl text-center font-medium max-w-3xl mx-auto mt-4">
           {{ page.title }}
         </h1>
         <p class="text-muted text-center max-w-2xl mx-auto">
@@ -102,9 +111,9 @@ const formatDate = (dateString: string) => {
           <UContentSurround :surround />
         </UPageBody> -->
       <UContentSurround :surround
-        :ui="{ link: 'rounded-none ', root: 'sm:p-6 ', linkLeading: 'rounded-none bg-transparent' }" />
+        :ui="{ link: 'rounded-none ', root: 'p-6 ', linkLeading: 'rounded-none bg-transparent' }" />
     </UPage>
-  </UContainer>
+  </div>
 
 
 </template>
