@@ -55,7 +55,7 @@ const formatDate = (dateString: string) => {
 
 <template>
 
-  <div class="sm:border-x border-daniel-700/30 min-h-screen relative pt-6">
+  <UContainer class="sm:border-x border-daniel-700/30 min-h-screen px-0  sm:px-0 lg:px-0 relative pt-6">
 
     <UPage v-if="page">
       <!-- <UButton to="/projekt" class="text-sm rounded-none flex items-center gap-1 absolute left-4 top-3.5"
@@ -113,7 +113,7 @@ const formatDate = (dateString: string) => {
       <UContentSurround :surround
         :ui="{ link: 'rounded-none ', root: 'p-6 ', linkLeading: 'rounded-none bg-transparent' }" />
     </UPage>
-  </div>
+  </UContainer>
 
 
 </template>
