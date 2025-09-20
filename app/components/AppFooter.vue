@@ -10,12 +10,12 @@ const { footer } = useAppConfig()
     </template>
 
     <template #right>
-      <div class="space-x-6 text-left flex">
-        <div class="flex items-center gap-2">
+      <div class="space-x-6 text-center sm:flex">
+        <div class="flex items-center justify-center gap-2">
           <UIcon name="i-heroicons-phone-20-solid" class="text-daniel-500" />
           <a :href="'tel:' + footer.phone.number" class="hover:underline">{{ footer.phone.number }}</a>
         </div>
-        <div class="flex items-center gap-2">
+        <div class="flex items-center justify-center gap-2">
           <UIcon :name="footer.email.icon" class="text-daniel-500" />
           <a :href="'mailto:' + footer.email.address" class="hover:underline">{{ footer.email.address }}</a>
         </div>
