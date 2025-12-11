@@ -88,6 +88,8 @@ const formatDate = (dateString: string) => {
               <UModal :ui="{ content: 'rounded-none' }">
                 <NuxtImg :src="item" :alt="page.title" width="1000" height="600" format="webp" quality="80"
                   class="rounded-none w-full cursor-zoom-in " />
+                <NuxtImg :src="item" :alt="page.title" width="800" format="webp" quality="80"
+                  class=" w-full object-cover object-center hidden" />
                 <template #content>
                   <NuxtImg :src="item" :alt="page.title" width="800" format="webp" quality="80"
                     class=" w-full object-cover object-center" />
