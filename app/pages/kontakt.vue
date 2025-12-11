@@ -36,7 +36,7 @@ useSeoMeta({
 
 <template>
   <div></div>
-  <UContainer class="sm:border-x border-daniel-700/30">
+  <UContainer class="sm:border-x border-daniel-500/30">
     <UMain v-if="page">
 
       <UPageHero :title="page.title" :description="page.description" orientation="horizontal" :ui="{
@@ -62,7 +62,7 @@ useSeoMeta({
           </div>
         </template>
         <div class="flex justify-center w-full">
-          <NuxtImg src="/images/Snickare Person.jpg" class="  size-36 ring ring-primary-700/30" />
+          <NuxtImg src="/images/bil.jpg" class=" ring ring-primary-500/30" width="400" height="280" />
         </div>
 
       </UPageHero>
@@ -70,7 +70,7 @@ useSeoMeta({
       <!-- <div class="grid grid-cols-2">
 
         <LMap style="height: 350px" :zoom="14" :center="[57.26384781449794, 12.346302928765535]"
-          :use-global-leaflet="true" class=" border border-daniel-700/30" :minZoom="8" :max-zoom="16">
+          :use-global-leaflet="true" class=" border border-daniel-500/30" :minZoom="8" :max-zoom="16">
           <LTileLayer url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png"
             attribution="&amp;copy; <a href=&quot;https://www.openstreetmap.org/&quot;>OpenStreetMap</a> contributors"
             layer-type="base" name="OpenStreetMap" />

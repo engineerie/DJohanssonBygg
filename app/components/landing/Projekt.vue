@@ -14,8 +14,8 @@ if (!posts.value) {
 </script>
 
 <template>
-  <div class="border-b border-primary-700/30">
-    <UContainer class="sm:border-x border-daniel-700/30">
+  <div class="border-b border-primary-500/30">
+    <UContainer class="sm:border-x border-daniel-500/30">
 
       <UPageSection :title="page.projekt.title" :description="page.projekt.description"
         class="-mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 background" :ui="{
@@ -41,6 +41,7 @@ if (!posts.value) {
               description: 'hidden',
               header: '',
               date: 'hidden',
+              image: 'object-center'
             }">
 
             <!-- <template #footer>

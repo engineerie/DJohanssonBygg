@@ -7,11 +7,11 @@ defineProps<{
 </script>
 
 <template>
-  <UHeader class="bg-white dark:bg-black border-daniel-700/30 " :toggle="{
+  <UHeader class="bg-white dark:bg-black border-daniel-500/30 " :toggle="{
     color: 'primary',
     variant: 'ghost',
     size: 'xl',
-  }" :ui="{ container: 'sm:border-x border-daniel-700/30' }">
+  }" :ui="{ container: 'sm:border-x border-daniel-500/30' }">
     <template #title>
       <UColorModeImage light="/images/image.png" dark="/images/image_dark.png" :height="80" />
     </template>

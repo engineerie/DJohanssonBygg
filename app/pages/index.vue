@@ -21,20 +21,16 @@ useSeoMeta({
 <template>
   <UPage v-if="page">
     <LandingHero2 :page />
-    <div class="border-b border-primary-700/30">
-      <UContainer class="sm:border-x border-daniel-700/30">
+    <div class="border-b border-primary-500/30">
+      <UContainer class="sm:border-x border-daniel-500/30">
         <UPageSection :ui="{
           container: ' grid sm:grid-cols-2 lg:grid-cols-2'
         }">
           <div class="flex justify-center">
-            <NuxtImg src="/images/Snickare Person.jpg" class=" size-32 lg:size-46 mt-2 ring ring-primary-700/30 " />
+            <NuxtImg src="/images/Snickare Person.jpg" class=" size-32 lg:size-46 mt-2 ring ring-primary-500/30 " />
           </div>
-
           <LandingAbout :page />
-
-
         </UPageSection>
-
         <UPageSection :ui="{
           container: '!pt-0 '
         }">

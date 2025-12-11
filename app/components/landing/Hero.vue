@@ -11,7 +11,7 @@ defineProps<{
 <template>
   <UPageHero :ui="{
     headline: 'flex items-center justify-center',
-    title: ' max-w-xl mx-auto ',
+    title: 'max-w-xl mx-auto',
     links: 'mt-4 flex-col justify-center items-center'
   }" class="-mt-8">
     <template #headline>
@@ -125,7 +125,7 @@ defineProps<{
   </UPageHero>
   <UContainer>
     <UMarquee :overlay="false" pause-on-hover
-      class="py-0 -mx-8 sm:-mx-12 lg:-mx-16 [--duration:60s] border-y border-neutral-300">
+      class="py-0 -mx-8 sm:-mx-12 lg:-mx-16 [--duration:60s] border-y border-neutral-500/30">
       <Motion v-for="(img, index) in page.hero.images" :key="index" :initial="{
         scale: 1.1,
         opacity: 0,

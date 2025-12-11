@@ -1,5 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Balthazar&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 @import "@nuxt/ui";
+
+@font-face {
+  font-family: "Copperplate CC";
+  src:
+    url("../Copperplate CC Font Family/CopperplateCC-Heavy.ttf")
+      format("truetype"),
+    url("../Copperplate CC Font Family/CopperplateCC-Heavy.otf")
+      format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Copperplate CC";
+  src:
+    url("../Copperplate CC Font Family/CopperplateCC-Heavy.ttf")
+      format("truetype"),
+    url("../Copperplate CC Font Family/CopperplateCC-Heavy.otf")
+      format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
 
 @source "../../../content/**/*";
 

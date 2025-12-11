@@ -7,8 +7,8 @@ defineProps<{
 </script>
 
 <template>
-  <div class="border-b border-primary-700/30">
-    <UContainer class="sm:border-x border-daniel-700/30 bg-muted/50">
+  <div class="border-b border-primary-500/30">
+    <UContainer class="sm:border-x border-daniel-500/30 bg-muted/50">
       <UPageSection :ui="{
         container: 'px-0 !py-14 !pt-0 '
       }">

@@ -29,7 +29,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <UContainer class="sm:border-x border-daniel-700/30 px-0 sm:-px-6 lg:-px-8 background">
+  <UContainer class="sm:border-x border-daniel-500/30 px-0 sm:-px-6 lg:-px-8 background">
     <UPage v-if="page">
       <UContainer>
         <UPageHero :title="page.title" :description="page.description" :links="page.links" :ui="{
@@ -45,11 +45,11 @@ useSeoMeta({
           <Motion v-for="(post, index) in posts" :key="index" :initial="{ opacity: 0, transform: 'translateY(10px)' }"
             :while-in-view="{ opacity: 1, transform: 'translateY(0)' }" :transition="{ delay: 0.2 * index }"
             :in-view-options="{ once: true }">
-            <div class="border-y border-daniel-700/30 px-6 lg:px-12 overflow-hidden ">
+            <div class="border-y border-daniel-500/30 px-6 lg:px-12 overflow-hidden ">
               <UBlogPost variant="naked" orientation="horizontal" :to="post.path" v-bind="post" :ui="{
-                root: ' md:grid md:grid-cols-2 group overflow-visible transition-all duration-300 bg-white dark:bg-neutral-950 border-x sm:border-none-y border-daniel-700/30 rounded-none',
+                root: ' md:grid md:grid-cols-2 group overflow-visible transition-all duration-500/30 bg-white dark:bg-neutral-900 border-x sm:border-none-y border-daniel-500/30 rounded-none',
                 image:
-                  'group-hover/blog-post:scale-105 ring-default',
+                  'group-hover/blog-post:scale-105 ring-default object-center ',
                 header:
                   index % 2 === 0
                     ? 'shadow-none overflow-visible'

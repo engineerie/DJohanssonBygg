@@ -27,7 +27,7 @@ const ui = {
 
 <template>
 
-  <UContainer class="sm:border-x border-daniel-700/30">
+  <UContainer class="sm:border-x border-daniel-500/30">
     <UPageSection :title="page.faq.title" :description="page.faq.description" :ui="{
       container: '!py-24 gap-4 sm:gap-4',
       title: 'text-left text-xl sm:text-xl lg:text-2xl font-medium',
@@ -36,12 +36,12 @@ const ui = {
       <UTabs :items orientation="horizontal" :ui>
         <template #content="{ item }">
           <UAccordion trailing-icon="lucide:plus" :items="item.questions" :unmount-on-hide="false" :ui="{
-            item: 'border-primary-700/20 py-1',
-            trigger: ' border-0 group transform-gpu rounded-none bg-muted/1 will-change-transform hover:bg-muted/50 text-base',
+            item: 'border-primary-700/20 py-2 ',
+            trigger: ' border-0 group transform-gpu rounded bg-muted/1 will-change-transform hover:bg-muted/50 text-base px-4',
             trailingIcon: 'group-data-[state=closed]:rotate-0 group-data-[state=open]:rotate-135 text-base text-muted'
           }">
             <template #body="{ item: _item }">
-              <MDC :value="_item.content" unwrap="p" class="px-4" />
+              <MDC :value="_item.content" unwrap="p" class="p-4" />
             </template>
           </UAccordion>
         </template>

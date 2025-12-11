@@ -55,7 +55,7 @@ const formatDate = (dateString: string) => {
 
 <template>
 
-  <UContainer class="sm:border-x border-daniel-700/30 min-h-screen px-0  sm:px-0 lg:px-0 relative pt-6">
+  <UContainer class="sm:border-x border-daniel-500/30 min-h-screen px-0  sm:px-0 lg:px-0 relative pt-6">
 
     <UPage v-if="page">
       <!-- <UButton to="/projekt" class="text-sm rounded-none flex items-center gap-1 absolute left-4 top-3.5"
@@ -75,18 +75,24 @@ const formatDate = (dateString: string) => {
               {{ page.minRead }} MIN READ
             </span> -->
         </div>
-        <div class="border-y border-primary-700/30 mb-4">
+        <div class="border-y border-primary-500/30 mb-4">
 
 
-          <UContainer class="relative  border-daniel-700/30 sm:px-24 lg:px-40">
+          <UContainer class="relative  border-daniel-500/30 sm:px-24 lg:px-40">
             <UCarousel v-if="carouselItems.length" v-slot="{ item }" :items="carouselItems" dots arrows :ui="{
               prev: 'rounded-none',
               next: 'rounded-none',
               dots: '-bottom-4',
               dot: 'w-6 h-1',
-            }" class="w-full border-x border-daniel-700/30">
-              <NuxtImg :src="item" :alt="page.title" width="800" height="450"
-                class="rounded-none w-full object-cover object-center" />
+            }" class="w-full border-x border-daniel-500/30">
+              <UModal :ui="{ content: 'rounded-none' }">
+                <NuxtImg :src="item" :alt="page.title" width="1000" height="600" format="webp" quality="80"
+                  class="rounded-none w-full cursor-zoom-in " />
+                <template #content>
+                  <NuxtImg :src="item" :alt="page.title" width="800" format="webp" quality="80"
+                    class=" w-full object-cover object-center" />
+                </template>
+              </UModal>
             </UCarousel>
           </UContainer>
         </div>

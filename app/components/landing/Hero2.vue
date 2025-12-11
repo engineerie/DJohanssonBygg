@@ -9,15 +9,15 @@ defineProps<{
 </script>
 
 <template>
-  <div class="border-b border-primary-700/30">
+  <div class="border-b border-primary-500/30">
 
 
-    <UContainer class="sm:border-x border-daniel-700/30">
+    <UContainer class="sm:border-x border-daniel-500/30">
 
       <UPageHero orientation="horizontal" :ui="{
         headline: 'flex items-center justify-center',
-        title: ' max-w-2xl mx-auto text-5xl sm:text-5xl lg:text-5xl text-left sm:text-center lg:text-left',
-        description: 'text-left sm:text-center lg:text-left',
+        title: 'saturate-150  max-w-2xl mx-auto text-5xl sm:text-5xl lg:text-5xl text-left sm:text-center lg:text-left  dark:text-white',
+        description: 'dark:text-daniel-300 text-daniel-800 text-left sm:text-center lg:text-left',
         links: 'mt-4 flex-col justify-center items-start sm:items-center lg:items-start'
       }" class=" -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 background">
         <template #headline>
@@ -56,7 +56,9 @@ defineProps<{
         duration: 0.6,
         delay: 0.1
       }"> -->
-          {{ page.title }}
+          <span class="hero2-title">
+            {{ page.title }}
+          </span>
           <!-- </Motion> -->
         </template>
 
@@ -127,18 +129,18 @@ defineProps<{
         </template>
         <div class="flex justify-center">
           <NuxtImg width="400" height="400" src="/images/Carpenter House Stock Photo.jpeg"
-            class="  ring ring-primary-700/30 " />
+            class="  ring ring-primary-500/30 " />
         </div>
 
       </UPageHero>
     </UContainer>
   </div>
-  <div class="border-b border-primary-700/30">
+  <div class="border-b border-primary-500/30">
 
-    <UContainer class="sm:border-x border-daniel-700/30">
+    <UContainer class="sm:border-x border-daniel-500/30">
       <UContainer>
         <UMarquee :overlay="false" pause-on-hover
-          class="py-0 -mx-8 sm:-mx-12 lg:-mx-16 [--duration:40s] border-daniel-700/30">
+          class="py-0 -mx-8 sm:-mx-12 lg:-mx-16 [--duration:40s] border-daniel-500/30">
           <Motion v-for="(img, index) in page.hero.images" :key="index" :initial="{
             scale: 1.1,
             opacity: 0,
@@ -151,7 +153,7 @@ defineProps<{
             duration: 0.6,
             delay: index * 0.1
           }">
-            <NuxtImg width="234" height="234" class="border-x border-daniel-700/30 aspect-square object-cover"
+            <NuxtImg width="234" height="234" class="border-x border-daniel-500/30 aspect-square object-cover"
               :class="index % 2 === 0 ? '' : ''" v-bind="img" />
           </Motion>
         </UMarquee>
@@ -160,3 +162,12 @@ defineProps<{
 
   </div>
 </template>
+
+<style scoped>
+.hero2-title {
+  font-family: "Copperplate CC", serif;
+  font-weight: 600;
+  display: block;
+  text-wrap: balance;
+}
+</style>

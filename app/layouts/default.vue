@@ -53,7 +53,7 @@ const showBreadcrumb = computed(() => route.path !== '/' && route.path !== '')
       </UBreadcrumb>
     </UContainer>
 
-    <!-- <UContainer class="sm:border-x border-daniel-700/30 pt-10"> -->
+    <!-- <UContainer class="sm:border-x border-daniel-500/30 pt-10"> -->
     <slot />
     <AppFooter />
     <!-- </UContainer> -->
