@@ -16,7 +16,7 @@ defineProps<{
 
       <UPageHero orientation="horizontal" :ui="{
         headline: 'flex items-center justify-center',
-        title: 'saturate-150  max-w-2xl mx-auto text-5xl sm:text-5xl lg:text-5xl text-left sm:text-center lg:text-left  dark:text-white',
+        title: 'saturate-150  max-w-2xl mx-auto text-4xl sm:text-5xl lg:text-5xl text-left sm:text-center lg:text-left  dark:text-white',
         description: 'dark:text-daniel-300 text-daniel-800 text-left sm:text-center lg:text-left',
         links: 'mt-4 flex-col justify-center items-start sm:items-center lg:items-start'
       }" class=" -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 background">
