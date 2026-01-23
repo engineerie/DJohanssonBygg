@@ -153,8 +153,9 @@ defineProps<{
             duration: 0.6,
             delay: index * 0.1
           }">
-            <NuxtImg width="234" height="234" class="border-x border-daniel-500/30 aspect-square object-cover"
-              :class="index % 2 === 0 ? '' : ''" v-bind="img" />
+            <NuxtImg width="234" height="234" fit="cover"
+              class="border-x border-daniel-500/30 aspect-square object-cover" :class="index % 2 === 0 ? '' : ''"
+              v-bind="img" />
           </Motion>
         </UMarquee>
       </UContainer>

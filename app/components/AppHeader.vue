@@ -13,7 +13,8 @@ defineProps<{
     size: 'xl',
   }" :ui="{ container: 'sm:border-x border-daniel-500/30' }">
     <template #title>
-      <UColorModeImage light="/images/image.png" dark="/images/image_dark.png" :height="80" fit="cover" />
+      <NuxtImg src="/images/image_dark.png" height="80" fit="cover" />
+      <!-- <UColorModeImage light="/images/image.png" dark="/images/image_dark.png" :height="80"  /> -->
     </template>
     <template #right>
       <!-- <div>

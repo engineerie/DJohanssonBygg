@@ -27,7 +27,8 @@ useSeoMeta({
           container: ' grid sm:grid-cols-2 lg:grid-cols-2'
         }">
           <div class="flex justify-center">
-            <NuxtImg src="/images/Snickare Person.jpg" class=" size-32 lg:size-46 mt-2 ring ring-primary-500/30 " />
+            <NuxtImg src="/images/Snickare Person.jpg" fit="cover"
+              class=" size-32 lg:size-46 mt-2 ring ring-primary-500/30 " />
           </div>
           <LandingAbout :page />
         </UPageSection>
