@@ -5,6 +5,7 @@ content: |
 email:
   address: info@djohanssonbygg.se
   icon: i-heroicons-envelope-20-solid
+images: []
 location:
   street: Telnebacka 12
   postCode: 432 66
@@ -14,4 +15,3 @@ navigation: false
 phone:
   number: +46 73 072 85 31
   icon: i-heroicons-phone-20-solid
-images: []
