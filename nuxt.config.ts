@@ -14,6 +14,7 @@ export default defineNuxtConfig({
     "nuxt-og-image",
     "motion-v/nuxt",
     "@nuxtjs/leaflet",
+    "nuxt-studio",
   ],
 
   devtools: {
@@ -28,6 +29,14 @@ export default defineNuxtConfig({
     prerender: {
       routes: ["/"],
       crawlLinks: true,
+    },
+  },
+
+  studio: {
+    repository: {
+      provider: "github",
+      owner: "engineerie",
+      repo: "djohanssonbygg",
     },
   },
 

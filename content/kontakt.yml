@@ -1,17 +1,17 @@
 title: Kontakt
-description: ""
-phone:
-  number: "+46 73 072 85 31"
-  icon: i-heroicons-phone-20-solid
+content: |
+  Jag heter **Daniel Johansson** och arbetar som snickare. Med över sju års erfarenhet hjälper jag till med allt från renoveringar och köksbyggen till måttanpassade möbler.
+  Mindre projekt utför jag själv, vid större samarbetar jag med pålitliga hantverkare. Mitt fokus är alltid hög kvalitet, tydlig kommunikation och personlig service.
 email:
   address: info@djohanssonbygg.se
   icon: i-heroicons-envelope-20-solid
 location:
   street: Telnebacka 12
-  postCode: "432 66"
+  postCode: 432 66
   county: Veddige
   icon: i-heroicons-map-pin-20-solid
-content: |
-  Jag heter **Daniel Johansson** och arbetar som snickare. Med över sju års erfarenhet hjälper jag till med allt från renoveringar och köksbyggen till måttanpassade möbler.
-  Mindre projekt utför jag själv, vid större samarbetar jag med pålitliga hantverkare. Mitt fokus är alltid hög kvalitet, tydlig kommunikation och personlig service.
 navigation: false
+phone:
+  number: +46 73 072 85 31
+  icon: i-heroicons-phone-20-solid
+images: []

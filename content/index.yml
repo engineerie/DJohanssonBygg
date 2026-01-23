@@ -1,28 +1,5 @@
-seo:
-  title: D.Johansson Byggservice AB
-  description: ""
 title: Din snickare i Varberg
 description: Välkommen till en trygg partner inom bygg. Vi levererar kvalitet du kan lita på.
-hero:
-  links:
-    - label: Kontakta oss
-      to: /kontakt
-      color: neutral
-  images:
-    - src: /images/Facebook Image.jpeg
-      alt: Random Image 1
-    - src: /images/badrum.jpg
-      alt: Random Image 2
-    - src: /images/kök.jpg
-      alt: Random Image 3
-    - src: /images/trall.jpg
-      alt: Random Image 4
-    - src: /images/tak.jpg
-      alt: Random Image 4
-kontakt:
-  title: Om oss
-  description: |
-    D. Johansson Byggservice drivs av Daniel Johansson i Varberg. Jag erbjuder byggtjänster för både privatpersoner och företag, med fokus på pålitlighet och gott hantverk. Med flera års erfarenhet tar jag mig an renoveringar, tillbyggnader och mindre nybyggen. Mitt mål är alltid att leverera ett bra resultat till ett rimligt pris - utan krångel.
 experience:
   title: Varför välja oss?
   items:
@@ -51,22 +28,6 @@ experience:
         logo: i-ion-hammer
         url: https://linear.app
         color: daniel
-  description: ""
-testimonials:
-  - quote: Kommunikation och bemötande var professionellt från start till mål. Rekommenderas varmt till alla som söker en pålitlig snickare!
-    author:
-      name: Privatkund
-      description: Ny altan
-  - quote: Allt utfördes med stor noggrannhet och kvalitet, och vi fick kontinuerlig återkoppling under hela processen.
-    author:
-      name: Företagskund
-      description: Fasadbyte
-  - quote: Dom var lösningsorienterad och hittade smarta sätt att möta våra behov utan att kompromissa på kvalitet.
-    author:
-      name: Privatkund
-      description: Köksinstallation
-projekt:
-  title: Tidigare projekt
   description: ""
 faq:
   title: Vanliga frågor
@@ -106,4 +67,42 @@ faq:
         - label: Hur fungerar ROT-avdrag?
           content: |
             För bygg- och renoveringstjänster gäller i regel **ROT-avdrag**, vilket ger 30% skattereduktion på arbetskostnaden upp till Skatteverkets gällande tak. Vi sköter administrationen och drar av beloppet direkt på fakturan.
+hero:
+  links:
+    - label: Kontakta oss
+      to: /kontakt
+      color: neutral
+  images:
+    - src: /images/Facebook Image.jpeg
+      alt: Random Image 1
+    - src: /images/badrum.jpg
+      alt: Random Image 2
+    - src: /images/kök.jpg
+      alt: Random Image 3
+    - src: /images/trall.jpg
+      alt: Random Image 4
+    - src: /images/tak.jpg
+      alt: Random Image 4
+kontakt:
+  title: Om oss
+  description: D. Johansson Byggservice drivs av Daniel Johansson i Varberg. Jag erbjuder byggtjänster för både privatpersoner och företag, med fokus på pålitlighet och gott hantverk. Med flera års erfarenhet tar jag mig an renoveringar, tillbyggnader och mindre nybyggen. Mitt mål är alltid att leverera ett bra resultat till ett rimligt pris - utan krångel.
 navigation: false
+projekt:
+  title: Tidigare projekt
+  description: ""
+seo:
+  title: D.Johansson Byggservice AB
+  description: Välkommen till en trygg partner inom bygg. Vi levererar kvalitet du kan lita på.
+testimonials:
+  - quote: Kommunikation och bemötande var professionellt från start till mål. Rekommenderas varmt till alla som söker en pålitlig snickare!
+    author:
+      name: Privatkund
+      description: Ny altan
+  - quote: Allt utfördes med stor noggrannhet och kvalitet, och vi fick kontinuerlig återkoppling under hela processen.
+    author:
+      name: Företagskund
+      description: Fasadbyte
+  - quote: Dom var lösningsorienterad och hittade smarta sätt att möta våra behov utan att kompromissa på kvalitet.
+    author:
+      name: Privatkund
+      description: Köksinstallation
