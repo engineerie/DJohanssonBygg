@@ -128,7 +128,7 @@ defineProps<{
       </div> -->
         </template>
         <div class="flex justify-center">
-          <NuxtImg width="400" height="400" src="/images/Carpenter House Stock Photo.jpeg"
+          <NuxtImg width="400" height="400" fit="cover" src="/images/Carpenter House Stock Photo.jpeg"
             class="  ring ring-primary-500/30 " />
         </div>
 
