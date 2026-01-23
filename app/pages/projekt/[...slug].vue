@@ -86,13 +86,13 @@ const formatDate = (dateString: string) => {
               dot: 'w-6 h-1',
             }" class="w-full border-x border-daniel-500/30">
               <UModal :ui="{ content: 'rounded-none' }">
-                <NuxtImg :src="item" :alt="page.title" width="1000" height="600" format="webp" quality="80"
-                  class="rounded-none w-full cursor-zoom-in " />
-                <NuxtImg :src="item" :alt="page.title" width="800" format="webp" quality="80"
-                  class=" w-full object-cover object-center hidden" />
+                <NuxtImg :src="item" :alt="page.title" width="1000" height="600" format="webp" quality="80" fit="cover"
+                  class="rounded-none w-full cursor-zoom-in" />
+                <NuxtImg :src="item" :alt="page.title" width="800" format="webp" quality="80" fit="cover"
+                  class="w-full  object-center hidden" />
                 <template #content>
-                  <NuxtImg :src="item" :alt="page.title" width="800" format="webp" quality="80"
-                    class=" w-full object-cover object-center" />
+                  <NuxtImg :src="item" :alt="page.title" width="800" format="webp" quality="80" fit="cover"
+                    class="w-full object-center" />
                 </template>
               </UModal>
             </UCarousel>
