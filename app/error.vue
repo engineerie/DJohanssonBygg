@@ -9,6 +9,11 @@ defineProps({
 })
 
 useHead({
+  meta: [
+    { key: 'theme-color', name: 'theme-color', content: '#000000' },
+    { name: 'apple-mobile-web-app-capable', content: 'yes' },
+    { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' }
+  ],
   htmlAttrs: {
     lang: 'en'
   }

@@ -60,7 +60,15 @@ useSeoMeta({
         </div>
       </template>
       <div class="flex justify-center w-full">
-        <NuxtImg src="/images/Daniel.png" class=" ring ring-primary-500/30" width="400" height="280" />
+        <NuxtImg
+          src="/images/Daniel.png"
+          width="400"
+          height="280"
+          fit="cover"
+          sizes="400px"
+          densities="x1"
+          class="h-[280px] w-[400px] max-w-full object-cover ring ring-primary-500/30"
+        />
       </div>
 
     </UPageSection>

@@ -3,7 +3,7 @@ const { footer } = useAppConfig()
 </script>
 
 <template>
-  <UFooter class="z-10 bg-default border-t border-primary-500/30"
+  <UFooter class="z-10 bg-black border-t border-primary-500/30 "
     :ui="{ left: 'text-muted text-xs', container: 'sm:border-x border-primary-500/30' }">
     <template #left>
       {{ footer.credits }}
