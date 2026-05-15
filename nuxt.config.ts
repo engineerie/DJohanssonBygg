@@ -5,6 +5,11 @@ export default defineNuxtConfig({
       api: "https://api.nuxt.studio",
     },
   },
+  colorMode: {
+    preference: "dark",
+    fallback: "dark",
+    storageKey: "nuxt-color-mode-dark-only",
+  },
   modules: [
     "@nuxt/eslint",
     "@nuxt/image",

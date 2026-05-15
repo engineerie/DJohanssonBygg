@@ -14,11 +14,11 @@ defineProps<{
 
     <UContainer class="sm:border-x border-daniel-500/30">
 
-      <UPageHero orientation="horizontal" :ui="{
+      <UPageHero orientation="vertical" :ui="{
         headline: 'flex items-center justify-center',
-        title: 'saturate-150  max-w-2xl mx-auto text-4xl sm:text-5xl lg:text-5xl text-left sm:text-center lg:text-left  dark:text-white',
-        description: 'dark:text-daniel-300 text-daniel-800 text-left sm:text-center lg:text-left',
-        links: 'mt-4 flex-col justify-center items-start sm:items-center lg:items-start'
+        title: 'saturate-150  max-w-2xl mx-auto text-4xl sm:text-5xl lg:text-6xl text-left sm:text-center  dark:text-white',
+        description: 'dark:text-daniel-300 text-daniel-800 text-left sm:text-center ',
+        links: 'mt-4 flex-col justify-center items-start sm:items-center '
       }" class=" -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 background">
         <template #headline>
           <!-- <Motion :initial="{
@@ -127,10 +127,9 @@ defineProps<{
         </Motion>
       </div> -->
         </template>
-        <div class="flex justify-center">
-          <NuxtImg width="400" height="400" fit="cover" src="/images/Carpenter House Stock Photo.jpeg"
-            class="  ring ring-primary-500/30 " />
-        </div>
+        <!-- <div class="flex justify-center">
+          <NuxtImg width="400" height="400" fit="cover" src="/images/Daniel.png" class="  ring ring-primary-500/30 " />
+        </div> -->
 
       </UPageHero>
     </UContainer>

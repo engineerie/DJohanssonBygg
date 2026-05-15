@@ -36,35 +36,36 @@ useSeoMeta({
 
 <template>
   <div></div>
-  <UContainer class="sm:border-x border-daniel-500/30">
-    <UMain v-if="page">
+  <UContainer class="sm:border-x border-daniel-500/30" v-if="page">
 
-      <UPageHero :title="page.title" :description="page.description" orientation="horizontal" :ui="{
-
-      }">
-        <template #description>
-          <div class="space-y-1 text-left w-full">
-            <div class="flex items-center gap-2">
-              <UIcon name="i-heroicons-phone-20-solid" class="text-daniel-500" />
-              <a :href="'tel:' + page.phone.number" class="hover:underline">{{ page.phone.number }}</a>
-            </div>
-            <div class="flex items-center gap-2">
-              <UIcon :name="page.email.icon" class="text-daniel-500" />
-              <a :href="'mailto:' + page.email.address" class="hover:underline">{{ page.email.address }}</a>
-            </div>
-            <div class="flex gap-2 flex-nowrap">
-              <UIcon :name="page.location.icon" class="text-daniel-500 mt-0.5" />
-              <span>{{ page.location.street }}, {{ page.location.postCode }} {{ page.location.county }}</span>
-            </div>
+    <UPageSection :title="page.title" :description="page.description" orientation="vertical" :ui="{
+      container: '!py-24 gap-4 sm:gap-4',
+      title: 'text-left text-xl sm:text-xl lg:text-2xl font-medium',
+      description: 'text-left mt-2 text-sm sm:text-md lg:text-sm text-muted'
+    }">
+      <template #description>
+        <div class="space-y-1 text-left w-full">
+          <div class="flex items-center gap-2">
+            <UIcon name="i-heroicons-phone-20-solid" class="text-daniel-500" />
+            <a :href="'tel:' + page.phone.number" class="hover:underline">{{ page.phone.number }}</a>
           </div>
-        </template>
-        <div class="flex justify-center w-full">
-          <NuxtImg src="/images/Daniel.png" class=" ring ring-primary-500/30" width="400" height="280" />
+          <div class="flex items-center gap-2">
+            <UIcon :name="page.email.icon" class="text-daniel-500" />
+            <a :href="'mailto:' + page.email.address" class="hover:underline">{{ page.email.address }}</a>
+          </div>
+          <div class="flex gap-2 flex-nowrap">
+            <UIcon :name="page.location.icon" class="text-daniel-500 mt-0.5" />
+            <span>{{ page.location.street }}, {{ page.location.postCode }} {{ page.location.county }}</span>
+          </div>
         </div>
+      </template>
+      <div class="flex justify-center w-full">
+        <NuxtImg src="/images/Daniel.png" class=" ring ring-primary-500/30" width="400" height="280" />
+      </div>
 
-      </UPageHero>
+    </UPageSection>
 
-      <!-- <div class="grid grid-cols-2">
+    <!-- <div class="grid grid-cols-2">
 
         <LMap style="height: 350px" :zoom="14" :center="[57.26384781449794, 12.346302928765535]"
           :use-global-leaflet="true" class=" border border-daniel-500/30" :minZoom="8" :max-zoom="16">
@@ -79,7 +80,7 @@ useSeoMeta({
         </div>
       </div> -->
 
-    </UMain>
+
   </UContainer>
 </template>
 

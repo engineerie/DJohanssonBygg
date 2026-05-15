@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import Kontakt from './kontakt.vue';
+
 const { data: page } = await useAsyncData('index', () => {
   return queryCollection('index').first()
 })
@@ -24,12 +26,11 @@ useSeoMeta({
     <div class="border-b border-primary-500/30">
       <UContainer class="sm:border-x border-daniel-500/30">
         <UPageSection :ui="{
-          container: ' grid sm:grid-cols-2 lg:grid-cols-2'
+          container: ' grid sm:grid-cols-1 lg:grid-cols-1 items-center'
         }">
-          <div class="flex justify-center">
-            <NuxtImg src="/images/Snickare Person.jpg" fit="cover"
-              class=" size-32 lg:size-46 mt-2 ring ring-primary-500/30 " />
-          </div>
+          <!-- <div class="flex justify-center items-center">
+            <NuxtImg src="/images/Daniel.png" fit="cover" class=" size-32 lg:size-72 mt-2 ring ring-primary-500/30 " />
+          </div> -->
           <LandingAbout :page />
         </UPageSection>
         <UPageSection :ui="{
@@ -39,8 +40,9 @@ useSeoMeta({
         </UPageSection>
       </UContainer>
     </div>
-    <LandingProjekt :page />
-    <LandingTestimonials :page />
+    <!-- <LandingProjekt :page />
+    <LandingTestimonials :page /> -->
     <LandingFAQ :page />
+    <!-- <LandingKontakt /> -->
   </UPage>
 </template>
