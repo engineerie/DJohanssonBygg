@@ -56,6 +56,8 @@
 }
 
 .dark {
+  --ui-bg: #000000;
+
   ::selection {
     color: #ffffff;
     background-color: #474747;
@@ -82,10 +84,10 @@
 }
 
 .dark .background {
-  background-color: #0f0f0f;
+  background-color: #000000;
   background-image:
     linear-gradient(#1a1a1a 2px, transparent 2px),
     linear-gradient(90deg, #1a1a1a 2px, transparent 2px),
     linear-gradient(#1a1a1a 1px, transparent 1px),
-    linear-gradient(90deg, #1a1a1a 1px, #0f0f0f 1px);
+    linear-gradient(90deg, #1a1a1a 1px, #000000 1px);
 }

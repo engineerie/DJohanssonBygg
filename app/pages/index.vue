@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import Kontakt from './kontakt.vue';
 
 const { data: page } = await useAsyncData('index', () => {
   return queryCollection('index').first()
