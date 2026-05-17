@@ -6,16 +6,6 @@ export const navLinks: NavigationMenuItem[] = [
     icon: "i-lucide-home",
     to: "/",
   },
-  // {
-  //   label: 'Projekt',
-  //   icon: 'i-lucide-folder',
-  //   to: '/projects'
-  // },
-  // {
-  //   label: "Projekt",
-  //   icon: "i-ion-hammer-outline",
-  //   to: "/projekt",
-  // },
   {
     label: "Kontakt",
     icon: "i-lucide-user",

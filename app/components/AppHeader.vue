@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { NavigationMenuItem } from '@nuxt/ui'
+import { businessEmail, businessPhone, businessPhoneHref } from '~/utils/seo'
 
 defineProps<{
   links: NavigationMenuItem[]
@@ -27,11 +28,11 @@ defineProps<{
       <div class=" hidden lg:flex items-center gap-4">
         <div class="items-center gap-2 flex">
           <UIcon name="i-heroicons-phone-20-solid" class="text-daniel-500" />
-          <a href="tel:+46350135947" class="hover:underline">+46 73 072 85 31</a>
+          <a :href="businessPhoneHref" class="hover:underline">{{ businessPhone }}</a>
         </div>
         <div class="flex items-center gap-2">
           <UIcon name="i-heroicons-envelope-20-solid" class="text-daniel-500" />
-          <a href="mailto:info@djohanssonbygg.se" class="hover:underline">info@djohanssonbygg.se</a>
+          <a :href="`mailto:${businessEmail}`" class="hover:underline">{{ businessEmail }}</a>
         </div>
       </div>
       <!-- <UButton label="Kontakt" to="/kontakt" class="hidden sm:flex" /> -->

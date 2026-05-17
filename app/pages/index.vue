@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { defaultSeoDescription, defaultSeoTitle, siteUrl } from '~/utils/seo'
 
 const { data: page } = await useAsyncData('index', () => {
   return queryCollection('index').first()
@@ -11,11 +12,51 @@ if (!page.value) {
   })
 }
 
+const title = page.value?.seo.title || defaultSeoTitle
+const description = page.value?.seo.description || page.value?.description || defaultSeoDescription
+
 useSeoMeta({
-  title: page.value?.seo.title || page.value?.title,
-  ogTitle: page.value?.seo.title || page.value?.title,
-  description: page.value?.seo.description || page.value?.description,
-  ogDescription: page.value?.seo.description || page.value?.description
+  title,
+  ogTitle: title,
+  description,
+  ogDescription: description
+})
+
+const faqEntities =
+  page.value?.faq?.categories?.flatMap((category) =>
+    category.questions.map((question) => ({
+      '@type': 'Question',
+      name: question.label,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: question.content.replace(/\*\*/g, '').trim()
+      }
+    }))
+  ) || []
+
+useHead({
+  script: [
+    {
+      key: 'home-faq-schema',
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqEntities
+      })
+    },
+    {
+      key: 'home-webpage-schema',
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: title,
+        description,
+        url: siteUrl
+      })
+    }
+  ]
 })
 </script>
 

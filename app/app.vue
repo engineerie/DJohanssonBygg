@@ -1,5 +1,44 @@
 <script setup lang="ts">
-useHead({
+import {
+  businessCountry,
+  businessEmail,
+  businessLocality,
+  businessName,
+  businessPhone,
+  businessPostalCode,
+  businessRegion,
+  businessStreet,
+  defaultSeoDescription,
+  siteUrl
+} from '~/utils/seo'
+
+const route = useRoute()
+
+const canonicalUrl = computed(() => {
+  const path = route.path === '/' ? '/' : route.path.replace(/\/+$/, '')
+  return `${siteUrl}${path}`
+})
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: businessName,
+  url: siteUrl,
+  telephone: businessPhone,
+  email: businessEmail,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: businessStreet,
+    postalCode: businessPostalCode,
+    addressLocality: businessLocality,
+    addressRegion: businessRegion,
+    addressCountry: businessCountry
+  },
+  areaServed: ['Varberg', 'Veddige', 'Halland'],
+  image: `${siteUrl}/images/Daniel.png`
+}
+
+useHead(() => ({
   meta: [
     { charset: 'utf-8' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -8,37 +47,30 @@ useHead({
     { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' }
   ],
   link: [
-    { rel: 'icon', href: '/favicon.ico' }
+    { rel: 'icon', href: '/favicon.ico' },
+    { rel: 'canonical', href: canonicalUrl.value }
   ],
   htmlAttrs: {
-    lang: 'en'
-  }
-})
+    lang: 'sv-SE'
+  },
+  script: [
+    {
+      key: 'local-business-schema',
+      type: 'application/ld+json',
+      children: JSON.stringify(organizationSchema)
+    }
+  ]
+}))
 
 useSeoMeta({
-  titleTemplate: '%s - D. Johansson Byggservice AB',
-  // ogImage: 'https://ui4.nuxt.com/assets/templates/nuxt/portfolio-light.png',
-  // twitterImage: 'https://ui4.nuxt.com/assets/templates/nuxt/portfolio-light.png',
+  titleTemplate: `%s - ${businessName}`,
+  description: defaultSeoDescription,
+  ogSiteName: businessName,
+  ogLocale: 'sv_SE',
+  ogUrl: canonicalUrl,
+  robots: 'index, follow',
   twitterCard: 'summary_large_image'
 })
-
-const [{ data: navigation }, { data: files }] = await Promise.all([
-  useAsyncData('navigation', () => {
-    return Promise.all([
-      queryCollectionNavigation('projekt')
-    ])
-  }, {
-    transform: data => data.flat()
-  }),
-  useLazyAsyncData('search', () => {
-    return Promise.all([
-      queryCollectionSearchSections('projekt')
-    ])
-  }, {
-    server: false,
-    transform: data => data.flat()
-  })
-])
 </script>
 
 <template>
@@ -48,10 +80,5 @@ const [{ data: navigation }, { data: files }] = await Promise.all([
         <NuxtPage />
       </UMain>
     </NuxtLayout>
-
-    <ClientOnly>
-      <LazyUContentSearch :files="files" :navigation="navigation" shortcut="meta_k" :links="navLinks"
-        :fuse="{ resultLimit: 42 }" />
-    </ClientOnly>
   </UApp>
 </template>

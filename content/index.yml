@@ -61,25 +61,22 @@ hero:
       color: neutral
   images:
     - src: /images/Facebook Image.jpeg
-      alt: Random Image 1
+      alt: Altanbygge i Varberg av D. Johansson Byggservice
     - src: /images/badrum.jpg
-      alt: Random Image 2
+      alt: Badrumsrenovering i Varberg
     - src: /images/kök.jpg
-      alt: Random Image 3
+      alt: Köksrenovering i Varberg
     - src: /images/trall.jpg
-      alt: Random Image 4
+      alt: Trädäck och trallarbete i Halland
     - src: /images/tak.jpg
-      alt: Random Image 4
+      alt: Takarbete utfört av snickare i Halland
 kontakt:
   title: Om oss
   description: D. Johansson Byggservice drivs av Daniel Johansson i Varberg. Jag erbjuder byggtjänster för både privatpersoner och företag, med fokus på pålitlighet och gott hantverk. Med flera års erfarenhet tar jag mig an renoveringar, tillbyggnader och mindre nybyggen. Mitt mål är alltid att leverera ett bra resultat till ett rimligt pris - utan krångel.
 navigation: false
-projekt:
-  title: Tidigare projekt
-  description: ""
 seo:
-  title: D.Johansson Byggservice AB
-  description: Välkommen till en trygg partner inom bygg. Vi levererar kvalitet du kan lita på.
+  title: Snickare i Varberg
+  description: Snickare i Varberg för altaner, kök, renovering, tak och byggservice. D. Johansson Byggservice hjälper kunder i Varberg, Veddige och Halland.
 testimonials:
   - quote: Kommunikation och bemötande var professionellt från start till mål. Rekommenderas varmt till alla som söker en pålitlig snickare!
     author:

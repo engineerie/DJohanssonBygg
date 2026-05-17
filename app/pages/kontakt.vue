@@ -1,5 +1,17 @@
 <script setup lang="ts">
 import { onMounted, shallowRef } from 'vue'
+import {
+  businessCountry,
+  businessEmail,
+  businessLocality,
+  businessName,
+  businessPhone,
+  businessPhoneHref,
+  businessPostalCode,
+  businessRegion,
+  businessStreet,
+  siteUrl
+} from '~/utils/seo'
 
 const customIcon = shallowRef<any>(null)
 
@@ -26,11 +38,44 @@ if (!page.value) {
   })
 }
 
+const title = page.value?.seo?.title || page.value?.title
+const description = page.value?.seo?.description || page.value?.description || page.value?.content
+
 useSeoMeta({
-  title: page.value?.seo?.title || page.value?.title,
-  ogTitle: page.value?.seo?.title || page.value?.title,
-  description: page.value?.seo?.description || page.value?.description,
-  ogDescription: page.value?.seo?.description || page.value?.description
+  title,
+  ogTitle: title,
+  description,
+  ogDescription: description
+})
+
+useHead({
+  script: [
+    {
+      key: 'contact-webpage-schema',
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'ContactPage',
+        name: title,
+        description,
+        url: `${siteUrl}/kontakt`,
+        mainEntity: {
+          '@type': 'LocalBusiness',
+          name: businessName,
+          telephone: businessPhone,
+          email: businessEmail,
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: businessStreet,
+            postalCode: businessPostalCode,
+            addressLocality: businessLocality,
+            addressRegion: businessRegion,
+            addressCountry: businessCountry
+          }
+        }
+      })
+    }
+  ]
 })
 </script>
 
@@ -46,7 +91,7 @@ useSeoMeta({
           <div class="space-y-1 text-left w-full">
             <div class="flex items-center gap-2">
               <UIcon name="i-heroicons-phone-20-solid" class="text-daniel-500" />
-              <a :href="'tel:' + page.phone.number" class="hover:underline">{{ page.phone.number }}</a>
+              <a :href="businessPhoneHref" class="hover:underline">{{ page.phone.number }}</a>
             </div>
             <div class="flex items-center gap-2">
               <UIcon :name="page.email.icon" class="text-daniel-500" />
